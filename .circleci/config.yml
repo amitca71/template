@@ -389,9 +389,9 @@ workflows:
 #          requires:
 #            - dev_dependencies
 #            - dependencies
-          filters:
-            branches:
-              only: develop
+#          filters:
+#            branches:
+#              only: develop
       - build:
           requires:
             - dev_dependencies
