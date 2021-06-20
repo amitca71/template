@@ -214,12 +214,12 @@ jobs:
 #            -Dsonar.coverage.exclusions=src/index.ts \
 #            -Dsonar.login=${SONAR_LOGIN}
 #            cat -n .scannerwork/report-task.txt
-      - save_cache:
-          name: Cache SonarQube Scanner
-          key: -sonar-scanner-3.3.0.1492-linux
-          paths:
-            - sonar-scanner-3.3.0.1492-linux
-            - /home/circleci/.sonar
+#      - save_cache:
+#          name: Cache SonarQube Scanner
+#          key: -sonar-scanner-3.3.0.1492-linux
+#          paths:
+#            - sonar-scanner-3.3.0.1492-linux
+#            - /home/circleci/.sonar
       - store_test_results:
           path: reports
 
