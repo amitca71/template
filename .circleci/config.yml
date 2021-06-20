@@ -190,14 +190,14 @@ jobs:
 #            ./cc-test-reporter before-build
 #            ./node_modules/.bin/nyc report --reporter=text-lcov > coverage/lcov.info
 #            ./cc-test-reporter after-build -t lcov
-      - restore_cache:
-          name: Restore SonarQube Scanner
-          key: -sonar-scanner-3.3.0.1492-linux
-      - run:
-          name: Download SonarQube Scanner (if still necessary)
-          command: |
-            chmod +x .circleci/install_sonar-scanner.sh
-            ./.circleci/install_sonar-scanner.sh
+#      - restore_cache:
+#          name: Restore SonarQube Scanner
+#          key: -sonar-scanner-3.3.0.1492-linux
+#      - run:
+#          name: Download SonarQube Scanner (if still necessary)
+#          command: |
+#            chmod +x .circleci/install_sonar-scanner.sh
+#            ./.circleci/install_sonar-scanner.sh
 #      - run:
 #          name: Sonarcloud Scan
 #          command: |
