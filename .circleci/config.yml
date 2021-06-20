@@ -449,14 +449,14 @@ workflows:
               only:
                 - master
                 - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
-      - code_review:
-          requires:
-            - dev_dependencies
-          filters:
-            branches:
-              only:
-                - master
-                - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
+#      - code_review:
+#          requires:
+#            - dev_dependencies
+#          filters:
+#            branches:
+#              only:
+#                - master
+#                - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
       - build:
           production: true
           requires:
@@ -482,7 +482,7 @@ workflows:
           requires:
             - stamp
             - test
-            - code_review
+#            - code_review
             - docs
           filters:
             branches:
@@ -492,7 +492,7 @@ workflows:
           requires:
             - stamp
             - test
-            - code_review
+#            - code_review
             - docs
           filters:
             branches:
@@ -586,16 +586,16 @@ workflows:
                 - develop
                 - master
                 - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
-      - code_review:
-          requires:
-            - dev_dependencies
-            - dependencies
-          filters:
-            branches:
-              ignore:
-                - develop
-                - master
-                - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
+#      - code_review:
+#          requires:
+#            - dev_dependencies
+#            - dependencies
+#          filters:
+#            branches:
+#              ignore:
+#                - develop
+#                - master
+#                - /release\/v\d+\.\d+\.\d+-(alpha|beta|rc)(\.\d){0,1}/
       - build:
           requires:
             - dev_dependencies
